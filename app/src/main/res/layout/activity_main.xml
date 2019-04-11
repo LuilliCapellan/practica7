@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/addcard"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:textSize="10dp"
+                android:id="@+id/matriculaAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Matricula" />
+
+            <EditText
+                android:textSize="10dp"
+
+                android:id="@+id/nombreAdd"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/matriculaAdd"
+                android:hint="Nombre" />
+
+            <EditText
+                android:id="@+id/correoAdd"
+                android:textSize="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nombreAdd"
+                android:hint="Correo" />
+
+            <EditText
+                android:textSize="10dp"
+
+                android:id="@+id/carreraAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/correoAdd"
+                android:hint="Carrera" />
+            <Button
+                android:background="@color/colorAccent"
+                android:id="@+id/addstudent"
+                android:textColor="@color/cardview_light_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/carreraAdd"
+                android:text="Agregar"/>
+            <Button
+                android:background="@color/colorAccent"
+                android:id="@+id/buscar"
+                android:layout_toLeftOf="@+id/addstudent"
+                android:textColor="@color/cardview_light_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/carreraAdd"
+                android:text="Buscar"/>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/addcard"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
